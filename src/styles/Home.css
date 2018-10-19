@@ -1,0 +1,26 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.homeHeaderContainer{
+    background-color: rebeccapurple;
+    height: 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.homeHeaderText{
+    align-self: flex-start;
+    font-family: 'Karla', sans-serif;
+    font-size: 4vw;
+}
+
+.homeBodyContainer{
+    background-color: aliceblue;
+    height: 80%;
+    width: 100%;
+}
