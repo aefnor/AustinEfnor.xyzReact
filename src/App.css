@@ -1,6 +1,7 @@
 .html {
   background-color: #212122 !important;
 }
+
 .body {
   display: flex;
   /* background-color: #212122 !important; */
@@ -9,8 +10,8 @@
 
 .sidebar {
   padding: 10px;
-  width: 7%;
-  min-width: 7%;
+  width: 10%;
+  min-width: 10%;
   /* height: 500px; */
   background-color: #212122;
 }
@@ -35,7 +36,25 @@
 .fontKarla {
   font-family: 'Karla', sans-serif;
 }
-.adaptiveFontSize{
-  font-size: 1.3vw;
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+  .adaptiveFontSizeNormalScreen{
+    /* font-size: 1.7vw; */
+    font-size: 1.4vw;
+  }
+}
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .adaptiveFontSizeNormalScreen{
+    /* font-size: 1.7vw; */
+    font-size: 1.9vw;
+  }
 }
 
+.adaptiveFontSizeSmallScreen{
+  font-size: 1.5vw;
+}
+
+.routes li {
+  padding-bottom: 1.2vw;
+}
