@@ -56,11 +56,7 @@ class App extends Component {
                 <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/">Home</Link>
               </li>
               <li>
-<<<<<<< HEAD
-                <Link className="removeUnderline fontKarla adaptiveFontSize" to="/portfolio">Portfolio</Link>
-=======
-                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/bubblegum">Bubblegum</Link>
->>>>>>> 155ea2909bf40115ea0440d00287de55cbfd2062
+                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/portfolio">Portfolio</Link>
               </li>
               <li>
                 <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/shoelaces">Shoelaces</Link>

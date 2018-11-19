@@ -31,4 +31,19 @@
     padding: 3vw;
     padding-left: 20vw;
     padding-right: 20vw;   
+    height: 35%;
+}
+.emailContainer {
+    height: 35%;
+    width: 100%;
+    background-color: aqua;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.test {
+    /* align-items: center; */
+    padding-right: 20px;
+    background-color: "red";
 }
