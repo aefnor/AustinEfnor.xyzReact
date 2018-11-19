@@ -53,13 +53,17 @@ class App extends Component {
           <div className="sidebar" style={sideBarHeight}>
             <ul className="routes">
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSize" to="/">Home</Link>
+                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/">Home</Link>
               </li>
               <li>
+<<<<<<< HEAD
                 <Link className="removeUnderline fontKarla adaptiveFontSize" to="/portfolio">Portfolio</Link>
+=======
+                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/bubblegum">Bubblegum</Link>
+>>>>>>> 155ea2909bf40115ea0440d00287de55cbfd2062
               </li>
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSize" to="/shoelaces">Shoelaces</Link>
+                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/shoelaces">Shoelaces</Link>
               </li>
             </ul>
 
