@@ -32,9 +32,9 @@ class App extends Component {
         main: () => <Home height={this.state.height} width={this.state.width}/>
       },
       {
-        path: "/bubblegum",
-        sidebar: () => <div>bubblegum!</div>,
-        main: () => <h2>Bubblegum</h2>
+        path: "/portfolio",
+        sidebar: () => <div>portfolio!</div>,
+        main: () => <h2>Portfolio</h2>
       },
       {
         path: "/shoelaces",
@@ -56,7 +56,7 @@ class App extends Component {
                 <Link className="removeUnderline fontKarla adaptiveFontSize" to="/">Home</Link>
               </li>
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSize" to="/bubblegum">Bubblegum</Link>
+                <Link className="removeUnderline fontKarla adaptiveFontSize" to="/portfolio">Portfolio</Link>
               </li>
               <li>
                 <Link className="removeUnderline fontKarla adaptiveFontSize" to="/shoelaces">Shoelaces</Link>

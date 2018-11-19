@@ -24,3 +24,11 @@
     height: 80%;
     width: 100%;
 }
+.description{
+    align-self: flex-start;
+    font-family: 'Karla', sans-serif;
+    font-size: 2vw;
+    padding: 3vw;
+    padding-left: 20vw;
+    padding-right: 20vw;   
+}
