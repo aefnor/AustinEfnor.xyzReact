@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './screens/Home'
+import Portfolio from './screens/Portfolio'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -34,12 +35,12 @@ class App extends Component {
       {
         path: "/portfolio",
         sidebar: () => <div>portfolio!</div>,
-        main: () => <h2>Portfolio</h2>
+        main: () => <Portfolio />
       },
       {
-        path: "/shoelaces",
-        sidebar: () => <div>shoelaces!</div>,
-        main: () => <h2>Shoelaces</h2>
+        path: "/filler",
+        sidebar: () => <div>Some filler!</div>,
+        main: () => <h2>Some Filler</h2>
       }
     ];
     console.log("State of height and width: ", this.state.height, this.state.width)
@@ -59,7 +60,7 @@ class App extends Component {
                 <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/portfolio">Portfolio</Link>
               </li>
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/shoelaces">Shoelaces</Link>
+                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/filler">Filler</Link>
               </li>
             </ul>
 

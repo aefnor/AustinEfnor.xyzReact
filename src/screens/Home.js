@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "../styles/Home.css"
+import Background from "../assets/Background.png"
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import Input from '@material-ui/core/Input';
@@ -29,6 +30,7 @@ class Home extends Component {
         return(
             <div className="homeContainer" style={homeContainerHeight}>
                 <div className="homeHeaderContainer">
+                    {/* <img src={Background} className="backgroundImage"/> */}
                     <h3 className="homeHeaderText">Austin Efnor</h3>
                 </div>
                 <div className="homeBodyContainer">
@@ -37,7 +39,7 @@ class Home extends Component {
                         I have maintained an internship since my freshman year of college, totalling me to 3 years of work experience in a full production environment.
                     </p>
                     <div className="emailContainer">
-                        <TextField
+                        {/* <TextField
                             id="outlined-name"
                             label="Name"
                             className="test"
@@ -49,13 +51,14 @@ class Home extends Component {
                         <TextField
                             id="outlined-email-input"
                             label="Email"
-                            className="test"
+                            // className={classes.textField}
                             type="email"
                             name="email"
                             autoComplete="email"
                             margin="normal"
                             variant="outlined"
-                        />
+                        /> */}
+                        {/* <img src={Background} className="backgroundImage" /> */}
                     </div>
                 </div>
             </div>

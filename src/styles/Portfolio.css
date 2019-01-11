@@ -1,0 +1,9 @@
+.mainContainer{
+    display: flex;
+}
+.portfolioHeader{
+    color: 'red';
+}
+.mainHeader{
+    color: 'red';
+}
