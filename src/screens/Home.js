@@ -8,6 +8,7 @@ import Input from '@material-ui/core/Input';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Linkify from 'react-linkify'
+import austin from '../assets/austin.jpg'
 
 class Home extends Component {
     constructor(props) {
@@ -29,10 +30,11 @@ class Home extends Component {
     //https://blog.visme.co/website-color-schemes/
     render(){
         let homeContainerHeight = {
-            height: `${this.props.height}px`
+            // height: `${this.props.height}px`
+            flex: 1
           }
         let url = "www.intern.supply/"
-        console.log("Props: ", this.props)
+        console.log("Props: ", this.props, austin)
         
         return(
             <div className="homeContainer" style={homeContainerHeight}>
@@ -44,7 +46,8 @@ class Home extends Component {
                         I Co-Created , a website which sent over 400,000 applicants to internship applications in the Fall 2016 recruiting season.
                         I have maintained an internship since my freshman year of college, totalling me to 3 years of work experience in a full production environment.
                     </p>
-                    <a href="https://www.google.com/">open</a>
+                    {/* <a href="https://www.google.com/">open</a> */}
+                    <img src={require('../assets/austin.jpg')} alt="boohoo" width="500" height="500"/>
                 </div>
             </div>
         )

@@ -29,7 +29,7 @@ class App extends Component {
       {
         path: "/",
         exact: true,
-        sidebar: () => <div>home!</div>,
+        // sidebar: () => <div>home!</div>,
         main: () => <Home height={this.state.height} width={this.state.width}/>
       },
       {

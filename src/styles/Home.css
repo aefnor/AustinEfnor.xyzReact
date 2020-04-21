@@ -24,7 +24,7 @@
     background-color: aliceblue;
     height: 80%;
     width: 100%;
-    z-index: -1;
+    /* z-index: -1; */
 }
 .description{
     align-self: flex-start;

@@ -24,9 +24,9 @@
   text-decoration: none;
 }
 .main {
-  z-index: -2;
+  /* z-index: -2; */
   flex: 1;
-  padding: 10px;
+  display: flex;
   background-color: #303030;
 }
 .removeUnderline {
