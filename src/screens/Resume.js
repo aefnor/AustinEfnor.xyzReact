@@ -28,7 +28,7 @@ class Resume extends React.Component {
                             <p className="Intro">
                             Aug 2019 - Present
                             </p>
-                            <ul>
+                            <ul className="Intro">
                                 <li>Modernized 12 y/o application that patched the entire Schwab Unix environment for patchers to automate and easily monitor patching with SCCM, Remedy, Splunk, LDAP, CF, Bamboo</li>
                                 <li>Modernized 12 y/o application that patched the entire Schwab Unix environment for patchers to automate and easily monitor patching with RedHat Satellite, Remedy, Splunk, LDAP, CF. Bamboo</li>
                                 <li>From the ground up wrote two internal enterprise applications and saw them to production using Bamboo and Cloud Foundry using C#.net core, and React Javascript </li>
@@ -38,7 +38,7 @@ class Resume extends React.Component {
                             <p className="Intro">
                             Feb 2019 - Aug 2019
                             </p>
-                            <ul>
+                            <ul className="Intro">
                                 <li>Interacted with customers to constantly push feature driven development</li>
                                 <li>Wrote database migrations in MySQL to incorporate or modify existing schemas</li>
                                 <li>Built features from the ground up using php, css, js per client demand</li>
@@ -49,7 +49,7 @@ class Resume extends React.Component {
                             <p className="Intro">
                             July 2017 – February 2019
                             </p>
-                            <ul>
+                            <ul className="Intro">
                                 <li>Creating React Native App (with redux) to serve for our new product using BLE</li>
                                 <li>Created React application for internal view of our suppliers statistics for the day using SQL</li>
                                 <li>Created internal tool in VB.net using Oxyplot to programatically plot thousands of data points for sound analysis across amplifiers </li>
@@ -60,7 +60,7 @@ class Resume extends React.Component {
                             <h3>Arizona State University, Tempe, AZ — Computer Science</h3>
                             <p>August 2015 - May 2019, Tempe, AZ</p>
                             <p><b>Concentration</b>: Software Engineering &emsp;	<b>Cumulative</b>: 3.0 GPA</p>
-                            <p><b>Capstone</b>: Jet Propulsion Labs Psyche mission - focuses on Psyche 16, an asteroid with similar properties to that of Earth’s core. Winner – of the NASA Psyche Mobile app competition</p>
+                            <p className="Intro"><b>Capstone</b>: Jet Propulsion Labs Psyche mission - focuses on Psyche 16, an asteroid with similar properties to that of Earth’s core. Winner – of the NASA Psyche Mobile app competition</p>
                         </div>
                     </div>
                 </div>
