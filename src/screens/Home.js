@@ -47,7 +47,7 @@ class Home extends Component {
                 </div>
                 <div className="homeBodyContainer">
                     <p className="description">
-                        I Co-Created , a website which sent over 400,000 applicants to internship applications in the Fall 2016 recruiting season.
+                        I Co-Created a website which sent over 400,000 applicants to internship applications in the Fall 2016 recruiting season.
                         I have maintained an internship since my freshman year of college, totalling me to 3 years of work experience in a full production environment.
                     </p>
                 </div>
