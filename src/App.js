@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './screens/Home'
 import Portfolio from './screens/Portfolio'
+import About from './screens/About'
+import Projects from './screens/Projects'
+import Resume from './screens/Resume'
+import { SocialIcon } from 'react-social-icons';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -29,38 +33,51 @@ class App extends Component {
       {
         path: "/",
         exact: true,
-        // sidebar: () => <div>home!</div>,
+        // sidebar: () => <SocialIcon url="https://twitter.com/aefnoraustin" />,
         main: () => <Home height={this.state.height} width={this.state.width}/>
       },
       {
         path: "/portfolio",
-        sidebar: () => <div>portfolio!</div>,
-        main: () => <Portfolio />
+        // sidebar: () => <div>portfolio!</div>,
+        main: () => <Projects />
       },
       {
         path: "/filler",
-        sidebar: () => <div>Some filler!</div>,
+        // sidebar: () => <div>Some filler!</div>,
         main: () => <h2>Some Filler</h2>
-      }
+      },
+      {
+        path: "/resume",
+        // sidebar: () => <div>Some filler!</div>,
+        main: () => <Resume />
+      },
+      {
+        path: "/about",
+        // sidebar: () => <div>What</div>,
+        main: () => <About/>
+      },
     ];
     console.log("State of height and width: ", this.state.height, this.state.width)
     let sideBarHeight = {
-      height: `${this.state.height}px`
+      minHeight: `${this.state.height}px`
     }
     return (
       <Router>
         <div className="body">
         <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet"></link>
           <div className="sidebar" style={sideBarHeight}>
-            <ul className="routes">
+            <ul className="routes center-flex" style={{height: '90%'}}>
               <li>
                 <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/">Home</Link>
               </li>
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/portfolio">Portfolio</Link>
+                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/about">About</Link>
               </li>
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/filler">Filler</Link>
+                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/portfolio">Projects</Link>
+              </li>
+              <li>
+                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/resume" href="AustinEfnor.xyzReact\src\assets\Resume 3-24-2020-No Word.pdf">Resume</Link>
               </li>
             </ul>
 
@@ -79,6 +96,11 @@ class App extends Component {
                 component={route.sidebar}
               />
             ))}
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <SocialIcon url="https://twitter.com/aefnoraustin" />
+                <SocialIcon url="https://www.instagram.com/austinefnor" />
+                <SocialIcon url="https://github.com/aefnor" />
+            </div>
           </div>
 
           <div className="main">

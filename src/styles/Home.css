@@ -6,7 +6,7 @@
 
 .homeHeaderContainer{
     background-color: aliceblue;
-    height: 20%;
+    height: 35%;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -16,13 +16,13 @@
 .homeHeaderText{
     align-self: flex-start;
     font-family: 'Karla', sans-serif;
-    font-size: 4vw;
+    font-size: 2vw;
     color: rgb(80, 101, 107);
 }
 
 .homeBodyContainer{
     background-color: aliceblue;
-    height: 80%;
+    height: 65%;
     width: 100%;
     /* z-index: -1; */
 }
@@ -33,7 +33,7 @@
     padding: 3vw;
     padding-left: 20vw;
     padding-right: 20vw;   
-    height: 35%;
+    height: 70%;
 }
 .emailContainer {
     height: 35%;
@@ -60,3 +60,23 @@
 .link {
     /* text-decoration: none; */
 }
+
+.size-image{
+    min-width: 10%;
+    min-height: 10%;
+    max-height: 12%;
+    max-width: 12%;
+    border-radius: 50%;
+    display: flex;
+    /* margin-left: 30%; */
+}
+
+.logo {
+    border-bottom: 0;
+    display: flex;
+    /* margin: 0 0 1em 0; */
+    justify-content: center;
+    overflow: hidden;
+    /* position: relative; */
+}
+

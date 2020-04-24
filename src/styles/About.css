@@ -1,0 +1,39 @@
+.Container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.Body {
+    /* height: 100%; */
+    width: 100%;
+    background-color: white;
+}
+.Body-side {
+    /* height: 100%; */
+    width: 30%;
+    /* background-color: blue; */
+}
+
+.Header {
+    height: 30%;
+    border-bottom: solid 1px rgba(160,160,160,0.3);
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.Body-Container {
+    /* height: 50%; */
+
+}
+
+.adaptiveFontSizeSmallScreen{
+    font-size: 2vw;
+  }
+
+.about-me-body {
+    padding: 3%;
+}
+.Intro {
+    line-height: 200%;
+}
