@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     const routes = [
       {
-        path: "/",
+        path: "/AustinEfnor.xyzReact",
         exact: true,
         // sidebar: () => <SocialIcon url="https://twitter.com/aefnoraustin" />,
         main: () => <Home height={this.state.height} width={this.state.width}/>
@@ -68,7 +68,7 @@ class App extends Component {
           <div className="sidebar" style={sideBarHeight}>
             <ul className="routes center-flex" style={{height: '90%'}}>
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/">Home</Link>
+                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/AustinEfnor.xyzReact">Home</Link>
               </li>
               <li>
                 <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/about">About</Link>
