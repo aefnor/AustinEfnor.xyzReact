@@ -66,7 +66,7 @@ class App extends Component {
         <div className="body">
         <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet"></link>
           <div className="sidebar" style={sideBarHeight}>
-            <ul className="routes center-flex" style={{height: '90%'}}>
+            <ul className="routes center-flex">
               <li>
                 <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/AustinEfnor.xyzReact">Home</Link>
               </li>
@@ -96,7 +96,7 @@ class App extends Component {
                 component={route.sidebar}
               />
             ))}
-            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+            <div className="social">
                 <SocialIcon url="https://twitter.com/aefnoraustin" />
                 <SocialIcon url="https://www.instagram.com/austinefnor" />
                 <SocialIcon url="https://github.com/aefnor" />
