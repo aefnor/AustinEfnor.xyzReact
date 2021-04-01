@@ -18,15 +18,23 @@ class Resume extends React.Component {
                         <div className="fontKarla about-me-body">
                             <h1>Skills</h1>
                             <p className="Intro">
-                            <b>Languages</b>: Javascript, SQL, PHP, Python, VB, C#, , Java, C++, C, ASP
+                            <b>Languages</b>: Javascript, SQL, PHP, Python, VB, C#, Java, C++, C, ASP
                             <br/>
-                            <b>Frameworks & Other</b>: .net, node, react, react-native, Express, Nginx, git, CSS, Blade, Materialize
+                            <b>Frameworks & Other</b>: .net, Node, React, React-native, Express, Nginx, Git, CSS, Blade, Materialize
 
                             </p>
                             <h1>Experience</h1>
+                            <h3>Offerpad, Gilbert, AZ — Full Stack Developer</h3>
+                            <p className="Intro">
+                            Feb 2021 - Present
+                            </p>
+                            <ul className="Intro">
+                                <li>Making software that sells homes, not houses.</li>
+                            </ul>
+
                             <h3>Charles Schwab, Phoenix, AZ — Contractor - Full Stack Developer</h3>
                             <p className="Intro">
-                            Aug 2019 - Present
+                            Aug 2019 - Feb 2021
                             </p>
                             <ul className="Intro">
                                 <li>Modernized 12 y/o application that patched the entire Schwab Unix environment for patchers to automate and easily monitor patching with SCCM, Remedy, Splunk, LDAP, CF, Bamboo</li>

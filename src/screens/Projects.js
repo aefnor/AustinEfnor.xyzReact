@@ -16,6 +16,16 @@ class Projects extends React.Component {
                             </div>
                         </header>
                         <div className="fontKarla about-me-body">
+                            <h3>Terminal Dating - <a href="https://github.com/aefnor?tab=repositories">Private on Github email aefnor@yahoo.com for more information.</a></h3>
+                            {/* <img src='https://youtu.be/fey2LssTv9c' alt="boohoo" className="projects"/> */}
+                            <iframe className="projects" height='500' src="https://www.youtube.com/embed/fey2LssTv9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p className="Intro">
+                            Intern Supply is a website which sent over 400,000 applicants to 
+                            internship applications in the Fall 2016 recruiting season. Our goal was to deliver the ability to easily
+                            apply to many job applications anywhere with a free clicks. No searching google, all locations available.
+                            </p>
+                        </div>
+                        <div className="fontKarla about-me-body">
                             <h3>Intern Supply - <a href="https://intern.supply">https://intern.supply</a></h3>
                             <img src={require('../assets/InternSupply.png')} alt="boohoo" className="projects"/>
                             <p className="Intro">
@@ -32,7 +42,7 @@ class Projects extends React.Component {
                             </p>
                         </div>
                         <div className="fontKarla about-me-body">
-                            <h3>Youtube Clone - <a href="https://github.com/aefnor/ReactRedux">Redux Repo</a></h3>
+                            <h3>Redux - An Introduction <a href="https://github.com/aefnor/ReactRedux">Repo</a></h3>
                             <img src={require('../assets/react-redux.gif')} alt="boohoo" className="projects"/>
                             <p className="Intro">
                             A dive into redux and its inner workings.

@@ -72,7 +72,7 @@ class About extends React.Component {
                                     I have over 4,000 hours of Counter Strike Global Offensive
                                 </li>
                             </ul>
-                            <h3>Goals</h3>
+                            {/* <h3>Goals</h3>
                             <ul>
                                 <li>
                                     Own a McLaren P1
@@ -86,7 +86,7 @@ class About extends React.Component {
                                 <li>
                                     Trade Stocks into retirement
                                 </li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>
