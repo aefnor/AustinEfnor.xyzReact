@@ -20,9 +20,8 @@ class Projects extends React.Component {
                             {/* <img src='https://youtu.be/fey2LssTv9c' alt="boohoo" className="projects"/> */}
                             <iframe className="projects" height='500' src="https://www.youtube.com/embed/fey2LssTv9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <p className="Intro">
-                            Intern Supply is a website which sent over 400,000 applicants to 
-                            internship applications in the Fall 2016 recruiting season. Our goal was to deliver the ability to easily
-                            apply to many job applications anywhere with a free clicks. No searching google, all locations available.
+                            Terminal is a dating app under development designed for a niche market of airport travel. The ability to swipe on individuals heading to a location so that when you land you
+                            can connect instantly. Useful in the cases of layover or unexpected cancellations to meet new people.
                             </p>
                         </div>
                         <div className="fontKarla about-me-body">

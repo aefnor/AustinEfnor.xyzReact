@@ -29,7 +29,7 @@ class Resume extends React.Component {
                             Feb 2021 - Present
                             </p>
                             <ul className="Intro">
-                                <li>Making software that sells homes, not houses.</li>
+                                <li>Making software to sell homes, not houses.</li>
                             </ul>
 
                             <h3>Charles Schwab, Phoenix, AZ — Contractor - Full Stack Developer</h3>
@@ -37,9 +37,9 @@ class Resume extends React.Component {
                             Aug 2019 - Feb 2021
                             </p>
                             <ul className="Intro">
-                                <li>Modernized 12 y/o application that patched the entire Schwab Unix environment for patchers to automate and easily monitor patching with SCCM, Remedy, Splunk, LDAP, CF, Bamboo</li>
-                                <li>Modernized 12 y/o application that patched the entire Schwab Unix environment for patchers to automate and easily monitor patching with RedHat Satellite, Remedy, Splunk, LDAP, CF. Bamboo</li>
-                                <li>From the ground up wrote two internal enterprise applications and saw them to production using Bamboo and Cloud Foundry using C#.net core, and React Javascript </li>
+                                <li>Oversaw enterprise application development. Ran through the architecture review process, as well as planning, and implementation. Handled all diagraming, and governance meetings overseeing the product. Deployment/maintenance of the product was also a duty overseen. Communicated with the stakeholders to continually address their needs through agile dev.</li>
+                                <li>Full stack react app with c#.net api. This tool was utilized to obtain information on servers for windows patching. Batching* could be scheduled and monitored via SCCM. Automate the need to send manual emails to streamline QA after batch completion.</li>
+                                <li>Currency Team ran all patching operations in Schwab. In total we maintained over 100k servers application software, firmware, and overall security on the machines. It was my job to write tools and applications to help patchers streamline any process involved in keeping the machines up to date.</li>
                             </ul>
 
                             <h3>Whale Enterprises, Tempe, AZ — Software Developer</h3>

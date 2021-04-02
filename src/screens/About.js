@@ -25,10 +25,7 @@ class About extends React.Component {
                             </p>
                             <h3>Currently</h3>
                             <p className="Intro">
-                                At Charles Schwab I have learned to work accross many teams to publish enterprise applications in a large-scale environment. As a result of a being a large
-                                scale organization, I had to learn to coordinate with teams whom you may need to accomplish you next task in development. It made me more patient, and understanding
-                                of vast variety of life and how not everyones is the same. My main take away from Charles Schwab is the
-                                ability to develop a application with enterprise business needs from the ground up and saw it all the way to production. 
+                                Recently started at Offerpad as a Full Stack Developer. I am elated at the opportunity to innovate the Real Estate market alongside a group of truly amazing people.
                             </p>
                             <h3>I like</h3>
                             <ul>
