@@ -7,7 +7,7 @@ import About from './screens/About'
 import Projects from './screens/Projects'
 import Resume from './screens/Resume'
 import { SocialIcon } from 'react-social-icons';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -104,16 +104,19 @@ class App extends Component {
           </div>
 
           <div className="main">
-            {routes.map((route, index) => (
-              // Render more <Route>s with the same paths as
-              // above, but different components this time.
-              <Route
-                key={index}
-                path={route.path}
-                exact={route.exact}
-                component={route.main}
-              />
-            ))}
+            <Switch>
+              {routes.map((route, index) => (
+                // Render more <Route>s with the same paths as
+                // above, but different components this time.
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  component={route.main}
+                />
+              ))}
+              <Route component={Home} />
+            </Switch>
           </div>
         </div>
       </Router>
