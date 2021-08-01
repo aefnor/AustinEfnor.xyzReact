@@ -18,7 +18,7 @@ class About extends React.Component {
                         <div className="fontKarla about-me-body">
                             <h3>Intro</h3>
                             <p className="Intro">
-                                &emsp; I am a Co-Founder of <a href="https://intern.supply" className="removeUnderline" style={{color: '#219efd'}}>Intern Supply</a> where we supply internships
+                                &emsp; I am a Co-Founder of <a href="https://intern.supply" target="_blank" className="removeUnderline" style={{color: '#219efd'}}>Intern Supply</a> where we supply internships
                                 to students with ease. My primary job focus is in Full Stack Development, as building new things from the ground up is always exciting. I graduated school in 2019 and plan on going back to Arizona State
                                 University to get my Master in Artificial Intelligence. I am available for consulting on projects of interest, those can range from AI in game development, space exploration, and automation for ease! I am 
                                 based of out Arizona where I plan to live for the forseeable future.

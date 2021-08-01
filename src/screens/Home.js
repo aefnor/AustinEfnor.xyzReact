@@ -1,16 +1,5 @@
 import React, { Component } from 'react';
-import Link from 'react-router-dom/Link'
 import "../styles/Home.css"
-import Background from "../assets/Background.png"
-import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField';
-import Linkify from 'react-linkify'
-import austin from '../assets/austin.jpg'
-import profile from '../assets/ProfilePicture.jpg'
-
 class Home extends Component {
     constructor(props) {
       super(props);
@@ -31,11 +20,8 @@ class Home extends Component {
     //https://blog.visme.co/website-color-schemes/
     render(){
         let homeContainerHeight = {
-            // height: `${this.props.height}px`
             flex: 1
           }
-        let url = "www.intern.supply/"
-        console.log("Props: ", this.props, austin)
         
         return(
             <div className="homeContainer" style={homeContainerHeight}>

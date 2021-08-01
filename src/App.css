@@ -23,9 +23,54 @@ html, body, #app, #app>div {
 
 .social {
   display: flex;
-  height: auto;
-  width: auto;
+  flex-direction: row;
+  height: 30%;
+  width: 100%;
   justify-content: space-between;
+}
+
+@media (max-width: 1500px) {
+  .social {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .icon {
+    height: 10%;
+    width: 100%;
+    margin: 5%;
+  }
+
+  .adaptiveFontSizeNormalScreen{
+    /* font-size: 1.7vw; */
+    font-size: 2vw !important;
+  }
+}
+
+.resize {
+  border: 1px solid black; 
+  overflow:auto;
+}
+.resize.horizontal {
+  resize: horizontal;
+}
+.resize.vertical {
+  resize: vertical;
+}
+.resize.both {
+  resize: both;
+}
+.wrap {
+  max-width: 80%;
+}
+
+.icon {
+  height: 10%;
+  width: 100%;
 }
 
 .routes {

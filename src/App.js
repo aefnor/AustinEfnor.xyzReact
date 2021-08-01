@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Home from './screens/Home'
-import Portfolio from './screens/Portfolio'
 import About from './screens/About'
 import Projects from './screens/Projects'
 import Resume from './screens/Resume'
@@ -97,9 +95,9 @@ class App extends Component {
               />
             ))}
             <div className="social">
-                <SocialIcon url="https://twitter.com/aefnoraustin" />
-                <SocialIcon url="https://www.instagram.com/austinefnor" />
-                <SocialIcon url="https://github.com/aefnor" />
+                <SocialIcon className="icon" url="https://twitter.com/aefnoraustin" />
+                <SocialIcon className="icon" url="https://www.instagram.com/austinefnor" />
+                <SocialIcon className="icon" url="https://github.com/aefnor" />
             </div>
           </div>
 
