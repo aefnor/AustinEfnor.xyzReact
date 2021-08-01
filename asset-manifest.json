@@ -1,14 +1,11 @@
 {
-  "main.css": "static/css/main.81ded1b8.css",
-  "main.css.map": "static/css/main.81ded1b8.css.map",
-  "main.js": "static/js/main.cf388bf8.js",
-  "main.js.map": "static/js/main.cf388bf8.js.map",
-  "static\\media\\Background.png": "static/media/Background.e4355957.png",
+  "main.css": "static/css/main.b05e9d67.css",
+  "main.css.map": "static/css/main.b05e9d67.css.map",
+  "main.js": "static/js/main.5f57ff9b.js",
+  "main.js.map": "static/js/main.5f57ff9b.js.map",
   "static\\media\\FoodNinja.gif": "static/media/FoodNinja.89e7aa5e.gif",
   "static\\media\\InternSupply.png": "static/media/InternSupply.0dfa5521.png",
   "static\\media\\ProfilePicture.jpg": "static/media/ProfilePicture.de0bd8ab.jpg",
-  "static\\media\\austin.jpg": "static/media/austin.0df728c6.jpg",
-  "static\\media\\logo.svg": "static/media/logo.ee7cd8ed.svg",
   "static\\media\\react-redux.gif": "static/media/react-redux.02d80920.gif",
   "static\\media\\youtube-clone.gif": "static/media/youtube-clone.e26569a9.gif"
 }
