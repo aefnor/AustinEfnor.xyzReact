@@ -34,7 +34,11 @@ class Home extends Component {
                 <div className="homeBodyContainer">
                     <p className="description">
                         I Co-Created a website which sent over 400,000 applicants to internship applications in the Fall 2016 recruiting season.
-                        I have maintained an internship since my freshman year of college, totalling me to 3 years of work experience in a full production environment.
+                        I had maintained an internship since my freshman year of college, starting my first 'full time' job senior year of college. After college I was a hired on making react apps for Charles Schwab.
+                        Since then I have been working with Offerpad as a Fullstack Software Engineer.
+                        <br/>
+                        <br/>
+                        I also recently started my own <a href='https://www.linkedin.com/company/leet-coffee-bois/'>company</a> about a year ago where we create highly functionaly applications to suite the needs of our clients.
                     </p>
                 </div>
             </div>

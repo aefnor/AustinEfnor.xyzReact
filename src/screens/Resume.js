@@ -29,7 +29,8 @@ class Resume extends React.Component {
                             Feb 2021 - Present
                             </p>
                             <ul className="Intro">
-                                <li>Making software to sell homes, not houses.</li>
+                                <li>Create the new markets which allowed us to expand and gain investors / recognition to go public</li>
+                                <li>Worked with business requirements to enable the core operations of the Renovation, Disposition, Acquisition, and C&R Teams to streamline the sale of homes with simply designed UI's to streamline workloads. Collaborated with the Front End Web team to create a internal repository of highly reusable components for React. Co-lead in the re-architecture the administration site from Knockout JS to React</li>
                             </ul>
 
                             <h3>Charles Schwab, Phoenix, AZ — Contractor - Full Stack Developer</h3>
