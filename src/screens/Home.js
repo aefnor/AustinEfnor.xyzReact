@@ -38,7 +38,7 @@ class Home extends Component {
                         Since then I have been working with Offerpad as a Fullstack Software Engineer.
                         <br/>
                         <br/>
-                        I also recently started my own <a href='https://www.linkedin.com/company/leet-coffee-bois/'>company</a> about a year ago where we create highly functionaly applications to suite the needs of our clients.
+                        I also recently started my own <a href='https://www.linkedin.com/company/leet-coffee-bois/'>company</a> about a year ago where we create highly functional applications to suite the needs of our clients.
                     </p>
                 </div>
             </div>
