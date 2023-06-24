@@ -55,7 +55,7 @@ class App extends Component {
         main: () => <About/>
       },
     ];
-    console.log("State of height and width: ", this.state.height, this.state.width)
+    
     let sideBarHeight = {
       minHeight: `${this.state.height}px`
     }

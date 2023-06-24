@@ -18,15 +18,23 @@ class Resume extends React.Component {
                         <div className="fontKarla about-me-body">
                             <h1>Skills</h1>
                             <p className="Intro">
-                            <b>Languages</b>: Javascript, SQL, PHP, Python, VB, C#, Java, C++, C, ASP
+                            <b>Languages</b>: Javascript, Python, SQL, C#, VB, Java, C++, C, ASP, PHP
                             <br/>
-                            <b>Frameworks & Other</b>: .net, Node, React, React-native, Express, Nginx, Git, CSS, Blade, Materialize
+                            <b>Frameworks & Other</b>: React, Node, Express, FastAPI, Git, CSS, Cypress, React-native
 
                             </p>
                             <h1>Experience</h1>
+                            <h3>NuclearnAI, AZ — Full Stack Developer</h3>
+                            <p className="Intro">
+                            Feb 2023 - Present
+                            </p>
+                            <ul className="Intro">
+                                <li>Integrating Artificial Intelligence with Nuclear Utilities</li>
+                            </ul>
+
                             <h3>Offerpad, Gilbert, AZ — Full Stack Developer</h3>
                             <p className="Intro">
-                            Feb 2021 - Present
+                            Feb 2021 - Feb 2023
                             </p>
                             <ul className="Intro">
                                 <li>Create the new markets which allowed us to expand and gain investors / recognition to go public</li>
