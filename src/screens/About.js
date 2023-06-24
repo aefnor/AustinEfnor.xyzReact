@@ -25,7 +25,7 @@ class About extends React.Component {
                             </p>
                             <h3>Currently</h3>
                             <p className="Intro">
-                                Recently started at Offerpad as a Full Stack Developer. I am elated at the opportunity to innovate the Real Estate market alongside a group of truly amazing people.
+                                Recently started at NuclearnAI as a Full Stack Developer. Working with Amazing people to integrate AI into Nuclear Utilities.
                             </p>
                             <h3>I like</h3>
                             <ul>
