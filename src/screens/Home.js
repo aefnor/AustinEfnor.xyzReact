@@ -38,8 +38,8 @@ class Home extends Component {
                         Then, I worked at Offerpad as a Fullstack Software Engineer converting KnockoutJS to React, as well as other general Fullstack work. Now I work at Nuclearn AI,
                         a startup in the Phoenix area, as a Fullstack Software Engineer.
                         <br/>
-                        <br/>
-                        Check out my company page - <a href='https://www.linkedin.com/company/leet-coffee-bois/'>here</a> for side some side work I have done.
+                        {/* <br/>
+                        Check out my company page - <a href='https://www.linkedin.com/company/leet-coffee-bois/'>here</a> for side some side work I have done. */}
                     </p>
                 </div>
             </div>
