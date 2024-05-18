@@ -36,7 +36,7 @@ class Home extends Component {
                         I Co-Created a website which sent over 400,000 applicants to internship applications in the Fall 2016 recruiting season.
                         I had maintained an internship since my freshman year of college, starting my first 'full time' job senior year of college. After college I was a hired on making react apps for Charles Schwab.
                         Then, I worked at Offerpad as a Fullstack Software Engineer converting KnockoutJS to React, as well as other general Fullstack work. Now I work at Nuclearn AI,
-                        a startup in the Phoenix area, as a Fullstack Software Engineer.
+                        a startup in the Phoenix area, as a Software Engineering Team Lead.
                         <br/>
                         {/* <br/>
                         Check out my company page - <a href='https://www.linkedin.com/company/leet-coffee-bois/'>here</a> for side some side work I have done. */}

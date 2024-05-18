@@ -18,9 +18,9 @@ class Resume extends React.Component {
                         <div className="fontKarla about-me-body">
                             <h1>Skills</h1>
                             <p className="Intro">
-                            <b>Languages</b>: Javascript, Python, SQL, C#, VB, Java, C++, C, ASP, PHP
+                            <b>Languages</b>: Javascript, POSTGRES, Python, PHP, VB, C#, Java, C++, C, ASP
                             <br/>
-                            <b>Frameworks & Other</b>: React, Node, Express, FastAPI, Git, CSS, Cypress, React-native
+                            <b>Frameworks & Other</b>: FastAPI, Node, React, Pydantic, SQLAlchemy, Celery, RabbitMQ, Redis, Express
 
                             </p>
                             <h1>Experience</h1>
@@ -29,7 +29,11 @@ class Resume extends React.Component {
                             Feb 2023 - Present
                             </p>
                             <ul className="Intro">
-                                <li>Integrating Artificial Intelligence with Nuclear Utilities</li>
+                                <li>Implemented two-pass encryption for streaming logs and other sensitive data using rsa key pair to encrypt an aes key taking the key result to encrypt sensitive data</li>
+                                <li>Completed feature rich products under strict deadlines building out the frontend, backend, and datamodels</li>
+                                <li>Maintained frontend and backend vulnerabilities alongside any that arose inside their respective host container images</li>
+                                <li>Developed and deployed a MS Word Add-in created in react to serve our models inside word docs for autocomplete, q&a, and summary analysis to streamline reporting and other documents</li>
+                                <li>Managed a team of ~4 developers, held one-on-ones, lead group outings, and kept a fun but professional atmosphere</li>
                             </ul>
 
                             <h3>Offerpad, Gilbert, AZ — Full Stack Developer</h3>
@@ -62,7 +66,7 @@ class Resume extends React.Component {
                                 <li>Incorporated existing platforms such as stripe or zoom for a more productive user flow</li>
                             </ul>
 
-                            <h3>Rockford Fosgate, Tempe, AZ— Software Developer Intern</h3>
+                            <h3>Rockford Fosgate, Tempe, AZ — Software Developer Intern</h3>
                             <p className="Intro">
                             July 2017 – February 2019
                             </p>
@@ -71,6 +75,17 @@ class Resume extends React.Component {
                                 <li>Created React application for internal view of our suppliers statistics for the day using SQL</li>
                                 <li>Created internal tool in VB.net using Oxyplot to programatically plot thousands of data points for sound analysis across amplifiers </li>
                                 <li>Streamlined automation of our sound processor using Iron-Python and VB.net</li>
+                            </ul>
+
+                            <h3>Lin and Associates, Scottsdale, AZ — Software Developer Intern</h3>
+                            <p className="Intro">
+                            July 2016 – February 2017
+                            </p>
+                            <ul className="Intro">
+                                <li>Created screenshotting tool for automating picture processes for clients across Altium, Yokogowa, DeltaV. C#.net</li>
+                                <li>Worked with Windows Native to translate older versions of our software into a more current version. VB</li>
+                                <li>Designed “shapes” for graphics in Visual Basic. Shapes are used to manipulate control systems and alarm refineries. Vb/VB.net </li>
+                                <li>Created internal project management tool for managing employees’ attendance in office with accordance to project dates. VBA</li>
                             </ul>
 
                             <h1>Education</h1>
