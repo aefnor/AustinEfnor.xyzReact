@@ -24,7 +24,7 @@ class Resume extends React.Component {
 
                             </p>
                             <h1>Experience</h1>
-                            <h3>NuclearnAI, AZ — Full Stack Developer</h3>
+                            <h3>Nuclearn, Phoenix, AZ — Software Engineering Team Lead</h3>
                             <p className="Intro">
                             Feb 2023 - Present
                             </p>
