@@ -2,7 +2,7 @@
   "name": "austinefnorreact.xyz",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aefnor.github.io/AustinEfnor.xyzReact",
+  "homepage": "https://austinefnor.xyz",
   "dependencies": {
     "@material-ui/core": "^3.4.0",
     "gh-pages": "^2.2.0",
