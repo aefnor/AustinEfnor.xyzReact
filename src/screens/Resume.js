@@ -1,16 +1,16 @@
 import React from 'react';
-import { 
-  Grid, 
-  Typography, 
-  Paper, 
+import {
+  Grid,
+  Typography,
+  Paper,
   Divider,
   List,
   ListItem,
   ListItemText,
-  withStyles
+  withStyles,
 } from '@material-ui/core';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
     padding: '2rem',
@@ -42,200 +42,97 @@ const styles = theme => ({
     color: '#666',
     marginBottom: '1rem',
   },
-  paragraph: {
-    lineHeight: 1.7,
-    marginBottom: '1rem',
-  },
-  divider: {
-    margin: '1.5rem 0',
-  },
-  list: {
-    padding: '0.5rem 0',
-  },
   listItem: {
     padding: '0.5rem 0',
   },
   bold: {
     fontWeight: 600,
   },
-  educationInfo: {
-    marginBottom: '0.5rem',
-  }
 });
 
 class Resume extends React.Component {
-  render(){
+  renderExperience(title, period, points) {
+    const { classes } = this.props;
+    return (
+      <div>
+        <Typography variant="h6" className={classes.jobTitle}>{title}</Typography>
+        <Typography variant="body2" className={classes.jobPeriod}>{period}</Typography>
+        <List dense>
+          {points.map((text, i) => (
+            <ListItem key={i} className={classes.listItem}>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+      </div>
+    );
+  }
+
+  render() {
     const { classes } = this.props;
 
-    return(
+    return (
       <div className={classes.root}>
         <Grid container spacing={24}>
           <Grid item xs={12} md={10} lg={8} style={{ margin: '0 auto' }}>
             <Paper className={classes.paper}>
-              <Typography variant="h3" className={classes.header}>
-                Resume
-              </Typography>
-              
-              <Typography variant="h5" className={classes.sectionTitle}>
-                Skills
-              </Typography>
-              <Typography variant="body1" className={classes.paragraph}>
-                <span className={classes.bold}>Languages</span>: Javascript, POSTGRES, Python, PHP, VB, C#, Java, C++, C, ASP
-              </Typography>
-              <Typography variant="body1" className={classes.paragraph}>
-                <span className={classes.bold}>Frameworks & Other</span>: FastAPI, Node, React, Pydantic, SQLAlchemy, Celery, RabbitMQ, Redis, Express
-              </Typography>
-              
+              <Typography variant="h3" className={classes.header}>Austin Efnor</Typography>
+              <Typography variant="body1" align="center">Fullstack Software Engineer - Gilbert, AZ | adefnor@gmail.com | (480) 528-8760</Typography>
+
               <Divider className={classes.divider} />
-              
-              <Typography variant="h5" className={classes.sectionTitle}>
-                Experience
-              </Typography>
-              
-              {/* Nuclearn */}
-              <Typography variant="h6" className={classes.jobTitle}>
-                Nuclearn, Phoenix, AZ — Software Engineering Team Lead
-              </Typography>
-              <Typography variant="body2" className={classes.jobPeriod}>
-                Feb 2023 - Present
-              </Typography>
-              <List dense className={classes.list}>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Implemented two-pass encryption for streaming logs and other sensitive data using rsa key pair to encrypt an aes key taking the key result to encrypt sensitive data" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Completed feature rich products under strict deadlines building out the frontend, backend, and datamodels" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Maintained frontend and backend vulnerabilities alongside any that arose inside their respective host container images" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Developed and deployed a MS Word Add-in created in react to serve our models inside word docs for autocomplete, q&a, and summary analysis to streamline reporting and other documents" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Managed a team of ~4 developers, held one-on-ones, lead group outings, and kept a fun but professional atmosphere" />
-                </ListItem>
-              </List>
-              
-              {/* Offerpad */}
-              <Typography variant="h6" className={classes.jobTitle}>
-                Offerpad, Gilbert, AZ — Full Stack Developer
-              </Typography>
-              <Typography variant="body2" className={classes.jobPeriod}>
-                Feb 2021 - Feb 2023
-              </Typography>
-              <List dense className={classes.list}>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Create the new markets which allowed us to expand and gain investors / recognition to go public" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Worked with business requirements to enable the core operations of the Renovation, Disposition, Acquisition, and C&R Teams to streamline the sale of homes with simply designed UI's to streamline workloads. Collaborated with the Front End Web team to create a internal repository of highly reusable components for React. Co-lead in the re-architecture the administration site from Knockout JS to React" />
-                </ListItem>
-              </List>
-              
-              {/* Charles Schwab */}
-              <Typography variant="h6" className={classes.jobTitle}>
-                Charles Schwab, Phoenix, AZ — Contractor - Full Stack Developer
-              </Typography>
-              <Typography variant="body2" className={classes.jobPeriod}>
-                Aug 2019 - Feb 2021
-              </Typography>
-              <List dense className={classes.list}>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Oversaw enterprise application development. Ran through the architecture review process, as well as planning, and implementation. Handled all diagraming, and governance meetings overseeing the product. Deployment/maintenance of the product was also a duty overseen. Communicated with the stakeholders to continually address their needs through agile dev." />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Full stack react app with c#.net api. This tool was utilized to obtain information on servers for windows patching. Batching* could be scheduled and monitored via SCCM. Automate the need to send manual emails to streamline QA after batch completion." />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Currency Team ran all patching operations in Schwab. In total we maintained over 100k servers application software, firmware, and overall security on the machines. It was my job to write tools and applications to help patchers streamline any process involved in keeping the machines up to date." />
-                </ListItem>
-              </List>
-              
-              {/* Whale Enterprises */}
-              <Typography variant="h6" className={classes.jobTitle}>
-                Whale Enterprises, Tempe, AZ — Software Developer
-              </Typography>
-              <Typography variant="body2" className={classes.jobPeriod}>
-                Feb 2019 - Aug 2019
-              </Typography>
-              <List dense className={classes.list}>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Interacted with customers to constantly push feature driven development" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Wrote database migrations in MySQL to incorporate or modify existing schemas" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Built features from the ground up using php, css, js per client demand" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Incorporated existing platforms such as stripe or zoom for a more productive user flow" />
-                </ListItem>
-              </List>
-              
-              {/* Rockford Fosgate */}
-              <Typography variant="h6" className={classes.jobTitle}>
-                Rockford Fosgate, Tempe, AZ — Software Developer Intern
-              </Typography>
-              <Typography variant="body2" className={classes.jobPeriod}>
-                July 2017 – February 2019
-              </Typography>
-              <List dense className={classes.list}>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Creating React Native App (with redux) to serve for our new product using BLE" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Created React application for internal view of our suppliers statistics for the day using SQL" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Created internal tool in VB.net using Oxyplot to programatically plot thousands of data points for sound analysis across amplifiers" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Streamlined automation of our sound processor using Iron-Python and VB.net" />
-                </ListItem>
-              </List>
-              
-              {/* Lin and Associates */}
-              <Typography variant="h6" className={classes.jobTitle}>
-                Lin and Associates, Scottsdale, AZ — Software Developer Intern
-              </Typography>
-              <Typography variant="body2" className={classes.jobPeriod}>
-                July 2016 – February 2017
-              </Typography>
-              <List dense className={classes.list}>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Created screenshotting tool for automating picture processes for clients across Altium, Yokogowa, DeltaV. C#.net" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Worked with Windows Native to translate older versions of our software into a more current version. VB" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Designed 'shapes' for graphics in Visual Basic. Shapes are used to manipulate control systems and alarm refineries. Vb/VB.net" />
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Created internal project management tool for managing employees' attendance in office with accordance to project dates. VBA" />
-                </ListItem>
-              </List>
-              
+
+              <Typography variant="h5" className={classes.sectionTitle}>Experience</Typography>
+
+              {this.renderExperience('Software Engineer Team Lead at Nuclearn, Phoenix, AZ', 'May 2023 – Present', [
+                'Created scalable backend systems using FastAPI, Celery, RabbitMQ, Redis, SQLAlchemy, and Pydantic, with responsive frontends using React.',
+                'Implemented OAuth 2.0, Sentry, Cypress, and Playwright for secure and fast SaaS releases.',
+                'Developed and deployed a React-based MS Word Add-in for autocomplete, summarization, and Q&A on engineering documents using in-house models.',
+                'Led a team of engineers delivering scalable, feature-rich software products with customer-centric design.',
+                'Built a MapReduce framework in Python for processing high volumes of LLM and non-LLM workloads.',
+              ])}
+
+              {this.renderExperience('FullStack Developer at Offerpad, Gilbert, AZ', 'Feb 2021 – Feb 2023', [
+                'Created new market software enabling legal compliance and investor recognition during public offering preparations.',
+                'Designed UIs and features to support Renovation, Disposition, Acquisition, and C&R operations.',
+                'Built reusable component libraries in React and migrated legacy KnockoutJS code to React.',
+              ])}
+
+              {this.renderExperience('Software Developer at Charles Schwab, Phoenix, AZ', 'Aug 2019 – Feb 2021', [
+                'Managed architecture reviews, planning, and implementation of enterprise software using Agile.',
+                'Created a React + C#.NET app to automate server patching and QA processes via SCCM.',
+                'Built tools to support patching and security operations across 100,000+ servers.',
+              ])}
+
+              {this.renderExperience('Software Developer at Whale Enterprises, Tempe, AZ', 'Feb 2019 – Aug 2019', [
+                'Interacted directly with customers to deliver feature-driven development quickly.',
+                'Built custom features using PHP, CSS, and JS based on client demand.',
+                'Created MySQL migrations to support schema changes and enhancements.',
+                'Integrated third-party platforms like Stripe and Zoom to improve user workflows.',
+              ])}
+
+              {this.renderExperience('Software Developer Intern at Rockford Fosgate, Tempe, AZ', 'Jul 2017 – Feb 2019', [
+                'Developed a React Native app with Redux for a new BLE-enabled product.',
+                'Built a React dashboard for internal supplier stats using SQL.',
+                'Created a VB.NET tool using Oxyplot for amplifier data analysis.',
+                'Automated sound processor calibration using IronPython and VB.NET.',
+              ])}
+
+              {this.renderExperience('Software Developer Intern at Lin and Associates, Scottsdale, AZ', 'Jul 2016 – Feb 2017', [
+                'Created a screenshot automation tool in C# .NET for process control documentation.',
+                'Translated legacy Windows apps into modern versions using VB.',
+                'Designed VB graphics "shapes" to manipulate refinery control systems.',
+                'Built a VBA internal project tracker to manage employee time and attendance.',
+              ])}
+
               <Divider className={classes.divider} />
-              
-              <Typography variant="h5" className={classes.sectionTitle}>
-                Education
+
+              <Typography variant="h5" className={classes.sectionTitle}>Education</Typography>
+              <Typography variant="h6" className={classes.jobTitle}>Arizona State University, Tempe, AZ</Typography>
+              <Typography variant="body1">B.S. in Computer Science, Software Engineering Emphasis (2015 – 2019)</Typography>
+              <Typography variant="body1" paragraph>
+                <span className={classes.bold}>Capstone</span>: Jet Propulsion Labs Psyche mission – Winner of NASA Psyche Mobile App Competition
               </Typography>
-              <Typography variant="h6" className={classes.jobTitle}>
-                Arizona State University, Tempe, AZ — Computer Science
-              </Typography>
-              <Typography variant="body1" className={classes.educationInfo}>
-                August 2015 - May 2019, Tempe, AZ
-              </Typography>
-              <Typography variant="body1" className={classes.educationInfo}>
-                <span className={classes.bold}>Concentration</span>: Software Engineering &emsp;
-                <span className={classes.bold}>Cumulative</span>: 3.0 GPA
-              </Typography>
-              <Typography variant="body1" className={classes.paragraph}>
-                <span className={classes.bold}>Capstone</span>: Jet Propulsion Labs Psyche mission - focuses on Psyche 16, an asteroid with similar properties to that of Earth's core. Winner – of the NASA Psyche Mobile app competition
-              </Typography>
+              <Typography variant="body2">https://psyche.asu.edu/get-involved/capstone-projects/capstone-projects-iron-class/psyche-experience-mobile-app-arrival/</Typography>
             </Paper>
           </Grid>
         </Grid>

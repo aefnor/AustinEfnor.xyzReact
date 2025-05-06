@@ -16,6 +16,11 @@ import ozzyImage from '../assets/dogs/photo_2025-05-05_22-40-47.jpg';
 import midasImage from '../assets/dogs/photo_2025-05-05_22-36-29.jpg';
 import ozzysWildNightImage from '../assets/dogs/photo_2025-05-05_22-36-17.jpg';
 import midasHandsupImage from '../assets/dogs/photo_2025-05-05_22-36-27.jpg';
+import sofiTukkerImage1 from '../assets/music/sofiTukker.jpg';
+import missMoniqueImage from '../assets/music/missMonique.jpg';
+import walterArtistImage from '../assets/music/walterArt.jpg';
+import walterMainImage from '../assets/music/walterMain.jpg';
+import martinGarrixOmniaImage from '../assets/music/martInGarrixOmnia.jpg';
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -121,11 +126,39 @@ class About extends React.Component {
     
     const technoImages = [
       { 
-        url: 'https://via.placeholder.com/400x300?text=Gun+Collection', 
-        title: 'My Collection', 
-        description: 'Part of my gun collection' 
+        url: sofiTukkerImage1, 
+        title: 'Sofi Tukker', 
+        description: 'Breakway Festival 2025 - Sofi Tukker' 
       },
-      // Add more gun images here
+    {
+        url: missMoniqueImage,
+        title: 'Miss Monique',
+        description: 'Walter Warehouse - Miss Monique 2025'
+
+    },
+    {
+        url: walterArtistImage,
+        title: 'Walter Artist',
+        description: 'Walter Warehouse - Walter Artist 2025'
+
+    },
+    {
+        url: walterMainImage,
+        title: 'Walter Main',
+        description: 'Walter Warehouse - Walter Main 2025'
+
+    },
+    {
+        url: martinGarrixOmniaImage,
+        title: 'Martin Garrix',
+        description: 'Martin Garrix at Omnia 2024'
+    },
+    {
+        url: 'https://youtube.com/shorts/EN4y_oRja4U?feature=share',
+        title: 'Hiroko Yamamura',
+        description: 'Hiroko Yamamura at Walter Warehouse 2025'
+    }
+
     ];
 
     return(
@@ -227,7 +260,7 @@ class About extends React.Component {
               {/* Gun Collection Section */}
               <Divider className={classes.divider} />
               <Typography variant="h5" className={classes.sectionTitle}>
-                Techno
+                Boots 'n Cats
               </Typography>
               <Grid container spacing={24} className={classes.imageGrid}>
                 {technoImages.map((techno, index) => (
