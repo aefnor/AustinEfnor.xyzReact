@@ -96,6 +96,16 @@ class Projects extends React.Component {
     
     const projects = [
       {
+        title: 'Voxel JS Game',
+        videoId: 'TiNio3h_IE8',
+        description: 'Voxel JS Game is a voxel based game engine built with React and Three.js. Uses service workers to offload processing off main thread. Just trying to push JS to its limits. Made with bun and three js only. It is a work in progress and is not yet complete.',
+        link: {
+          text: 'https://github.com/aefnor/voxel-game-js',
+          url: 'https://github.com/aefnor/voxel-game-js'
+        },
+        isVideo: true
+      },
+      {
         title: 'Fyb',
         videoId: '9lV63EqVr8M',
         description: 'FYB was designed to feed you and help you find food. It is a simple app that allows you to find food in your area with much randomness for those times when you just don\'t know what to eat.',

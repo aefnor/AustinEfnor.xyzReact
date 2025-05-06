@@ -1,19 +1,20 @@
 import React from 'react';
 import '../styles/About.css';
-import { 
-  Grid, 
-  Typography, 
-  Paper, 
-  List, 
-  ListItem, 
-  ListItemText, 
+import {
+  Grid,
+  Typography,
+  Paper,
+  List,
+  ListItem,
+  ListItemText,
   Card,
   CardContent,
   Divider,
+  IconButton,
   withStyles,
-  IconButton
 } from '@material-ui/core';
 // import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+
 import ozzyImage from '../assets/dogs/photo_2025-05-05_22-40-47.jpg';
 import midasImage from '../assets/dogs/photo_2025-05-05_22-36-29.jpg';
 import ozzysWildNightImage from '../assets/dogs/photo_2025-05-05_22-36-17.jpg';
@@ -24,7 +25,7 @@ import walterArtistImage from '../assets/music/walterArt.jpg';
 import walterMainImage from '../assets/music/walterMain.jpg';
 import martinGarrixOmniaImage from '../assets/music/martInGarrixOmnia.jpg';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
     padding: '2rem',
@@ -44,13 +45,11 @@ const styles = theme => ({
     marginTop: '1.5rem',
     marginBottom: '0.75rem',
     fontWeight: 600,
+    color: '#219efd',
   },
   paragraph: {
     lineHeight: 1.7,
     marginBottom: '1rem',
-  },
-  list: {
-    padding: '0.5rem 0',
   },
   listItem: {
     padding: '0.5rem 0',
@@ -76,20 +75,8 @@ const styles = theme => ({
       transform: 'scale(1.03)',
     },
   },
-  cardMedia: {
-    paddingTop: '75%', // 4:3 aspect ratio
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
-  cardContent: {
-    flexGrow: 1,
-    padding: '1rem',
-  },
-  divider: {
-    margin: '2rem 0',
-  },
   imageContainer: {
-    height: '300px', // Increased from 200px to 300px
+    height: '300px',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     borderTopLeftRadius: '8px',
@@ -99,12 +86,9 @@ const styles = theme => ({
     position: 'relative',
     height: '300px',
     backgroundColor: '#000',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    overflow: 'hidden',
     borderTopLeftRadius: '8px',
     borderTopRightRadius: '8px',
-    cursor: 'pointer',
   },
   videoOverlay: {
     position: 'absolute',
@@ -116,11 +100,12 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    opacity: 0.8,
     transition: 'opacity 0.3s ease',
+    opacity: 0.8,
     '&:hover': {
       opacity: 1,
     },
+    cursor: 'pointer',
   },
   playButton: {
     backgroundColor: '#219efd',
@@ -143,7 +128,7 @@ const styles = theme => ({
     borderTop: '15px solid transparent',
     borderBottom: '15px solid transparent',
     borderLeft: '25px solid white',
-    marginLeft: '5px', // Offset slightly to center visually
+    marginLeft: '5px',
   },
   iframe: {
     width: '100%',
@@ -155,215 +140,174 @@ const styles = theme => ({
 });
 
 class About extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeVideos: {}
-    };
-  }
-  
+  state = {
+    activeVideos: {},
+  };
+
   playVideo = (id) => {
-    this.setState(prevState => ({
-      activeVideos: {
-        ...prevState.activeVideos,
-        [id]: true
-      }
+    this.setState((prev) => ({
+      activeVideos: { ...prev.activeVideos, [id]: true },
     }));
-  }
-  
-  render(){
+  };
+
+  render() {
     const { classes } = this.props;
     const { activeVideos } = this.state;
-    
+
     const dogImages = [
-      { 
-        url: ozzyImage, 
-        title: 'Ozzy', 
-        description: 'My mini Golden Doodle'
-      },
-      {
-        url: midasImage,
-        title: 'Midas',
-        description: 'My Bernedoodle'
-      },
-      {
-        url: ozzysWildNightImage,
-        title: 'Ozzy\'s Wild Night',
-        description: 'Ozzy after a long night of fun'
-      },
-      {
-        url: midasHandsupImage,
-        title: 'Midas Hands Up',
-        description: 'Freeze!!'
-      }
+      { url: ozzyImage, title: 'Ozzy', description: 'My mini Golden Doodle' },
+      { url: midasImage, title: 'Midas', description: 'My Bernedoodle' },
+      { url: ozzysWildNightImage, title: "Ozzy's Wild Night", description: 'Ozzy after a long night of fun' },
+      { url: midasHandsupImage, title: 'Midas Hands Up', description: 'Freeze!!' },
     ];
-    
+
     const technoImages = [
-      { 
-        type: 'image',
-        url: sofiTukkerImage1, 
-        title: 'Sofi Tukker', 
-        description: 'Breakway Festival 2025 - Sofi Tukker' 
-      },
-      {
-        type: 'image',
-        url: missMoniqueImage,
-        title: 'Miss Monique',
-        description: 'Walter Warehouse - Miss Monique 2025'
-      },
-      {
-        type: 'image',
-        url: walterArtistImage,
-        title: 'Walter Artist',
-        description: 'Walter Warehouse - Walter Artist 2025'
-      },
-      {
-        type: 'image',
-        url: walterMainImage,
-        title: 'Walter Main',
-        description: 'Walter Warehouse - Walter Main 2025'
-      },
-      {
-        type: 'image',
-        url: martinGarrixOmniaImage,
-        title: 'Martin Garrix',
-        description: 'Martin Garrix at Omnia 2024'
-      },
+      { type: 'image', url: sofiTukkerImage1, title: 'Sofi Tukker', description: 'Breakway Festival 2025' },
+      { type: 'image', url: missMoniqueImage, title: 'Miss Monique', description: 'Walter Warehouse 2025' },
+      { type: 'image', url: walterArtistImage, title: 'Walter Artist', description: 'Walter Warehouse 2025' },
+      { type: 'image', url: walterMainImage, title: 'Walter Main', description: 'Walter Warehouse 2025' },
+      { type: 'image', url: martinGarrixOmniaImage, title: 'Martin Garrix', description: 'Omnia 2024' },
       {
         type: 'video',
         videoId: 'EN4y_oRja4U',
-        thumbnailUrl: 'https://img.youtube.com/vi/EN4y_oRja4U/hqdefault.jpg', // Standard format
+        thumbnailUrl: 'https://img.youtube.com/vi/EN4y_oRja4U/hqdefault.jpg',
         title: 'Hiroko Yamamura',
-        description: 'Hiroko Yamamura at Walter Warehouse 2025'
+        description: 'Walter Warehouse 2025',
       },
       {
         type: 'video',
         videoId: 'fSZKOxHTu9Y',
-        thumbnailUrl: 'https://img.youtube.com/vi/fSZKOxHTu9Y/hqdefault.jpg', // Standard format
-        title: 'Hiroko Yamamura In The Paint',
-        description: 'Hiroko Yamamura In The Paint at Walter Warehouse 2025'
+        thumbnailUrl: 'https://img.youtube.com/vi/fSZKOxHTu9Y/hqdefault.jpg',
+        title: 'Hiroko In The Paint',
+        description: 'Walter Warehouse 2025',
       },
       {
         type: 'video',
         videoId: 'LLFNUCwLVkg',
-        thumbnailUrl: 'https://img.youtube.com/vi/LLFNUCwLVkg/hqdefault.jpg', // Standard format
+        thumbnailUrl: 'https://img.youtube.com/vi/LLFNUCwLVkg/hqdefault.jpg',
         title: 'Miss Monique',
-        description: 'Miss Monique at Walter Warehouse 2025'
+        description: 'Walter Warehouse 2025',
       },
+      {
+        type: 'video',
+        videoId: 'm0uynKsuXAg',
+        thumbnailUrl: 'https://img.youtube.com/vi/m0uynKsuXAg/hqdefault.jpg',
+        title: 'Sofi Tukker',
+        description: 'Breakway Festival 2025 - Throw some ass',
+      }
+      // https://youtube.com/shorts/_0vg9q7J7Io?feature=share
+      ,{
+        type: 'video',
+        videoId: '_0vg9q7J7Io',
+        thumbnailUrl: 'https://img.youtube.com/vi/_0vg9q7J7Io/hqdefault.jpg',
+        title: 'Sofi Tukker',
+        description: 'Breakway Festival 2025 - Sleepyhead',
+      }
+      // https://youtube.com/shorts/2216pTzE7qk?feature=share
+      ,{
+        type: 'video',
+        videoId: '2216pTzE7qk',
+        thumbnailUrl: 'https://img.youtube.com/vi/2216pTzE7qk/hqdefault.jpg',
+        title: 'Gryffin',
+        description: 'Breakway Festival 2025 - idk',
+      }
     ];
 
-    return(
+    return (
       <div className={classes.root}>
-        <Grid container spacing={24}>
+        <Grid container spacing={3}>
           <Grid item xs={12} md={10} style={{ margin: '0 auto' }}>
             <Paper className={classes.paper}>
               <Typography variant="h3" className={classes.header}>
                 About Me
               </Typography>
-              
-              <Typography variant="h5" className={classes.sectionTitle}>
-                Intro
-              </Typography>
+
+              <Typography variant="h5" className={classes.sectionTitle}>Intro</Typography>
               <Typography variant="body1" className={classes.paragraph}>
-                I am a Co-Founder of <a href="https://intern.supply" target="_blank" className={classes.link}>
+                I am a Co-Founder of{' '}
+                <a href="https://intern.supply" target="_blank" rel="noopener noreferrer" className={classes.link}>
                   Intern Supply
-                </a> where we supply internships to students with ease. My primary job focus is in Full Stack Development, 
-                as building new things from the ground up is always exciting. I graduated school in 2019 and plan on going back to Arizona State
-                University to get my Master in Artificial Intelligence. I am available for consulting on projects of interest, those can range from 
-                AI in game development, space exploration, and automation for ease! I am based of out Arizona where I plan to live for the foreseeable future.
+                </a>. My primary focus is Full Stack Development. I graduated in 2019 and plan to return to Arizona State University for a Master's in AI. I love building things and am open to consulting on AI, game dev, and automation projects.
               </Typography>
-              
-              <Divider className={classes.divider} />
-              
-              <Typography variant="h5" className={classes.sectionTitle}>
-                Currently
-              </Typography>
+
+              <Divider style={{ margin: '2rem 0' }} />
+
+              <Typography variant="h5" className={classes.sectionTitle}>Currently</Typography>
               <Typography variant="body1" className={classes.paragraph}>
-                Recently started at NuclearnAI as a Full Stack Developer. Working with Amazing people to integrate AI into Nuclear Utilities.
+                I recently started at NuclearnAI as a Full Stack Developer, integrating AI into Nuclear Utilities.
               </Typography>
-              
-              <Divider className={classes.divider} />
-              
-              <Typography variant="h5" className={classes.sectionTitle}>
-                Fun Facts
-              </Typography>
-              <List className={classes.list}>
+{/* 
+              <Divider style={{ margin: '2rem 0' }} />
+
+              <Typography variant="h5" className={classes.sectionTitle}>Fun Facts</Typography>
+              <List>
                 {[
-                  "I have been to Iceland and want to go again",
-                  "Have 6 computers",
-                  "I love shooting",
-                  "I have over 4,000 hours of Counter Strike Global Offensive"
-                ].map((item, index) => (
-                  <ListItem key={index} className={classes.listItem}>
-                    <ListItemText primary={item} />
+                  "I've been to Iceland and want to go again",
+                  'Own 6 computers',
+                  'Love shooting',
+                  'Over 4,000 hours in CS:GO',
+                ].map((fact, i) => (
+                  <ListItem key={i} className={classes.listItem}>
+                    <ListItemText primary={fact} />
                   </ListItem>
                 ))}
-              </List>
-              
-              {/* Dog Section */}
-              <Divider className={classes.divider} />
-              <Typography variant="h5" className={classes.sectionTitle}>
-                My Dogs
-              </Typography>
-              <Grid container spacing={24} className={classes.imageGrid}>
-                {dogImages.map((dog, index) => (
-                  <Grid item xs={12} sm={6} md={4} key={index}>
+              </List> */}
+
+              <Divider style={{ margin: '2rem 0' }} />
+
+              <Typography variant="h5" className={classes.sectionTitle}>My Dogs</Typography>
+              <Grid container spacing={3} className={classes.imageGrid}>
+                {dogImages.map((dog, i) => (
+                  <Grid item xs={12} sm={6} md={4} key={i} style={{ padding: '12px' }}>
                     <Card className={classes.card}>
-                      <div 
-                        className={classes.imageContainer} 
-                        style={{ backgroundImage: `url(${dog.url})` }}
-                      />
-                      <CardContent className={classes.cardContent}>
-                        <Typography gutterBottom variant="h6">
-                          {dog.title}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary">
-                          {dog.description}
-                        </Typography>
+                      <div className={classes.imageContainer} style={{ backgroundImage: `url(${dog.url})` }} />
+                      <CardContent>
+                        <Typography gutterBottom variant="h6">{dog.title}</Typography>
+                        <Typography variant="body2" color="textSecondary">{dog.description}</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
                 ))}
               </Grid>
-              
-              {/* Boots 'n Cats Section */}
-              <Divider className={classes.divider} />
-              <Typography variant="h5" className={classes.sectionTitle}>
-                Boots 'n Cats
-              </Typography>
-              <Grid container spacing={24} className={classes.imageGrid}>
-                {technoImages.map((item, index) => (
-                  <Grid item xs={12} sm={6} md={4} key={index}>
+
+              <Divider style={{ margin: '2rem 0' }} />
+
+              <Typography variant="h5" className={classes.sectionTitle}>Boots 'n Cats</Typography>
+              <Grid container spacing={3} className={classes.imageGrid}>
+                {technoImages.map((item, i) => (
+                  <Grid item xs={12} sm={6} md={4} key={i} style={{ padding: '12px' }}>
                     <Card className={classes.card}>
                       {item.type === 'image' ? (
-                        <div 
-                          className={classes.imageContainer} 
-                          style={{ backgroundImage: `url(${item.url})` }}
-                        />
+                        <div className={classes.imageContainer} style={{ backgroundImage: `url(${item.url})` }} />
                       ) : (
                         <div className={classes.videoContainer}>
-                          {activeVideos[index] ? (
+                          {activeVideos[i] ? (
                             <iframe
                               className={classes.iframe}
                               src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1`}
                               title={item.title}
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allow="autoplay; encrypted-media"
                               allowFullScreen
                             />
                           ) : (
                             <div>
-                              <div 
-                                className={classes.imageContainer} 
-                                style={{ backgroundImage: `url(${item.thumbnailUrl})` }}
+                              <div
+                                style={{
+                                  position: 'absolute',
+                                  width: '100%',
+                                  height: '100%',
+                                  backgroundImage: `url(${item.thumbnailUrl})`,
+                                  backgroundSize: 'cover',
+                                  backgroundPosition: 'center',
+                                  borderTopLeftRadius: '8px',
+                                  borderTopRightRadius: '8px',
+                                }}
                               />
-                              <div 
+                              <div
                                 className={classes.videoOverlay}
-                                onClick={() => this.playVideo(index)}
+                                onClick={() => this.playVideo(i)}
                               >
-                                <IconButton 
-                                  className={classes.playButton}
-                                  aria-label="play"
-                                >
+                                <IconButton className={classes.playButton}>
                                   <div className={classes.playIcon} />
                                 </IconButton>
                               </div>
@@ -371,13 +315,9 @@ class About extends React.Component {
                           )}
                         </div>
                       )}
-                      <CardContent className={classes.cardContent}>
-                        <Typography gutterBottom variant="h6">
-                          {item.title}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary">
-                          {item.description}
-                        </Typography>
+                      <CardContent>
+                        <Typography gutterBottom variant="h6">{item.title}</Typography>
+                        <Typography variant="body2" color="textSecondary">{item.description}</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
