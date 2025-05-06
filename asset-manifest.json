@@ -1,11 +1,20 @@
 {
   "main.css": "static/css/main.6a301584.css",
   "main.css.map": "static/css/main.6a301584.css.map",
-  "main.js": "static/js/main.454a2c24.js",
-  "main.js.map": "static/js/main.454a2c24.js.map",
+  "main.js": "static/js/main.5656eb49.js",
+  "main.js.map": "static/js/main.5656eb49.js.map",
   "static\\media\\FoodNinja.gif": "static/media/FoodNinja.89e7aa5e.gif",
   "static\\media\\InternSupply.png": "static/media/InternSupply.0dfa5521.png",
   "static\\media\\ProfilePicture.jpg": "static/media/ProfilePicture.de0bd8ab.jpg",
+  "static\\media\\martInGarrixOmnia.jpg": "static/media/martInGarrixOmnia.4c4dda19.jpg",
+  "static\\media\\missMonique.jpg": "static/media/missMonique.8b9c239d.jpg",
+  "static\\media\\photo_2025-05-05_22-36-17.jpg": "static/media/photo_2025-05-05_22-36-17.e206a623.jpg",
+  "static\\media\\photo_2025-05-05_22-36-27.jpg": "static/media/photo_2025-05-05_22-36-27.33f689d2.jpg",
+  "static\\media\\photo_2025-05-05_22-36-29.jpg": "static/media/photo_2025-05-05_22-36-29.f4f96a49.jpg",
+  "static\\media\\photo_2025-05-05_22-40-47.jpg": "static/media/photo_2025-05-05_22-40-47.36377ae9.jpg",
   "static\\media\\react-redux.gif": "static/media/react-redux.02d80920.gif",
+  "static\\media\\sofiTukker.jpg": "static/media/sofiTukker.a2e95d0c.jpg",
+  "static\\media\\walterArt.jpg": "static/media/walterArt.41839d70.jpg",
+  "static\\media\\walterMain.jpg": "static/media/walterMain.a7d24545.jpg",
   "static\\media\\youtube-clone.gif": "static/media/youtube-clone.e26569a9.gif"
 }
