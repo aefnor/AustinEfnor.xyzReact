@@ -21,6 +21,35 @@ html, body, #app, #app>div {
   background-color: #212122;
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  
+  .main {
+    padding-bottom: 60px !important; /* More padding to ensure content doesn't get hidden behind nav */
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .body {
+    flex-direction: column;
+  }
+  
+  /* Mobile navigation styling */
+  .mobile-navigation {
+    display: block;
+  }
+  
+  /* Ensure the body takes full viewport height */
+  html, body, #root, .body {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
 .social {
   display: flex;
   flex-direction: row;
@@ -110,6 +139,51 @@ html, body, #app, #app>div {
     /* font-size: 1.7vw; */
     font-size: 1.9vw;
   }
+}
+
+/* Mobile navigation styling */
+.mobile-navigation {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-navigation {
+    display: block;
+  }
+  
+  /* Ensure main content area has enough padding at the bottom */
+  .main {
+    padding-bottom: 60px !important; /* More padding to ensure content doesn't get hidden behind nav */
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure the body takes full viewport height */
+  html, body, #root, .body {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+/* Fix for mobile navigation buttons */
+.MuiBottomNavigation-root {
+  justify-content: space-around !important;
+}
+
+.MuiBottomNavigationAction-root {
+  min-width: 60px !important;
+  max-width: 25% !important;
+  padding: 6px 8px !important;
+}
+
+.MuiBottomNavigationAction-wrapper {
+  color: aliceblue !important;
+}
+
+.MuiBottomNavigationAction-label {
+  font-size: 0.75rem !important;
+  opacity: 1 !important;
 }
 
 .adaptiveFontSizeSmallScreen{

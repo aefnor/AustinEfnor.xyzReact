@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
-import Home from './screens/Home'
-import About from './screens/About'
-import Projects from './screens/Projects'
-import Resume from './screens/Resume'
-import { SocialIcon } from 'react-social-icons';
+import React, { Component } from "react";
+import "./App.css";
+import Home from "./screens/Home";
+import About from "./screens/About";
+import Projects from "./screens/Projects";
+import Resume from "./screens/Resume";
+import MobileNavigation from "./components/MobileNavigationNew";
+import { SocialIcon } from "react-social-icons";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -13,66 +14,97 @@ class App extends Component {
     this.state = { width: 0, height: 0 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
-  
+
   componentDidMount() {
     this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
+    window.addEventListener("resize", this.updateWindowDimensions);
   }
-  
+
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
+    window.removeEventListener("resize", this.updateWindowDimensions);
   }
-  
+
   updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight - 20 });
+    this.setState({
+      width: window.innerWidth,
+      height: window.innerHeight - 20,
+    });
   }
-  
+
   render() {
     const routes = [
       {
         path: "/",
         exact: true,
-        main: () => <Home height={this.state.height} width={this.state.width} />
+        main: () => (
+          <Home height={this.state.height} width={this.state.width} />
+        ),
       },
       {
         path: "/portfolio",
-        main: () => <Projects />
+        main: () => <Projects />,
       },
       {
         path: "/filler",
-        main: () => <h2>Some Filler</h2>
+        main: () => <h2>Some Filler</h2>,
       },
       {
         path: "/resume",
-        main: () => <Resume />
+        main: () => <Resume />,
       },
       {
         path: "/about",
-        main: () => <About />
+        main: () => <About />,
       },
     ];
-    
+
     let sideBarHeight = {
-      minHeight: `${this.state.height}px`
-    }
-    
+      minHeight: `${this.state.height}px`,
+    };
     return (
       <Router>
         <div className="body">
-          <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet"></link>
+          <link
+            href="https://fonts.googleapis.com/css?family=Karla"
+            rel="stylesheet"
+          ></link>
+          <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+          ></link>
           <div className="sidebar" style={sideBarHeight}>
             <ul className="routes center-flex">
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/">Home</Link>
+                <Link
+                  className="removeUnderline fontKarla adaptiveFontSizeNormalScreen"
+                  to="/"
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/about">About</Link>
+                <Link
+                  className="removeUnderline fontKarla adaptiveFontSizeNormalScreen"
+                  to="/about"
+                >
+                  About
+                </Link>
               </li>
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/portfolio">Projects</Link>
+                <Link
+                  className="removeUnderline fontKarla adaptiveFontSizeNormalScreen"
+                  to="/portfolio"
+                >
+                  Projects
+                </Link>
               </li>
               <li>
-                <Link className="removeUnderline fontKarla adaptiveFontSizeNormalScreen" to="/resume">Resume</Link>
+                <Link
+                  className="removeUnderline fontKarla adaptiveFontSizeNormalScreen"
+                  to="/resume"
+                >
+                  Resume
+                </Link>
               </li>
             </ul>
 
@@ -85,8 +117,14 @@ class App extends Component {
               />
             ))}
             <div className="social">
-              <SocialIcon className="icon" url="https://twitter.com/aefnoraustin" />
-              <SocialIcon className="icon" url="https://www.instagram.com/austinefnor" />
+              <SocialIcon
+                className="icon"
+                url="https://twitter.com/aefnoraustin"
+              />
+              <SocialIcon
+                className="icon"
+                url="https://www.instagram.com/austinefnor"
+              />
               <SocialIcon className="icon" url="https://github.com/aefnor" />
             </div>
           </div>
@@ -104,6 +142,7 @@ class App extends Component {
               <Route component={Home} />
             </Switch>
           </div>
+          <MobileNavigation />
         </div>
       </Router>
     );
