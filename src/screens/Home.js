@@ -47,9 +47,8 @@ const styles = theme => ({
     display: 'flex',
     justifyContent: 'center',
     marginBottom: '2rem',
-  },
-  profileCard: {
-    maxWidth: 300,
+  },  profileCard: {
+    maxWidth: 400,
     borderRadius: '12px',
     boxShadow: '0 8px 16px rgba(0,0,0,0.2)',
     transition: 'transform 0.3s ease-in-out',
@@ -58,7 +57,7 @@ const styles = theme => ({
     },
   },
   profileImage: {
-    height: 300,
+    height: 200,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
