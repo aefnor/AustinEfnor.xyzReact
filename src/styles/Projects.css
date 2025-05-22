@@ -1,7 +1,36 @@
 .image {
-
+  max-width: 100%;
+  height: auto;
 }
 
 .projects {
-    width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix for links that may overflow on mobile */
+a {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  iframe, img {
+    max-width: 100%;
+  }
+  
+  /* Reduce padding for mobile */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Ensure the paper container isn't cut off */
+  .MuiPaper-root {
+    overflow: visible !important;
+  }
+  
+  /* Make sure content is readable */
+  .MuiTypography-body1, .MuiTypography-body2 {
+    font-size: 14px !important;
+  }
 }

@@ -17,6 +17,7 @@ const styles = (theme) => ({
     background: "#303030",
     borderTop: "1px solid #424242",
     display: "none",
+    boxShadow: "0px -2px 10px rgba(0,0,0,0.2)", // Add shadow for better visibility
     "@media (max-width: 768px)": {
       display: "flex",
     },

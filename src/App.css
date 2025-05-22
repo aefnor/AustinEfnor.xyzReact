@@ -27,15 +27,18 @@ html, body, #app, #app>div {
   }
   
   .main {
-    padding-bottom: 60px !important; /* More padding to ensure content doesn't get hidden behind nav */
+    padding-bottom: 70px !important; /* More padding to ensure content doesn't get hidden behind nav */
     width: 100%;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
+    height: auto;
+    overflow-y: visible;
     overflow-x: hidden;
   }
   
   .body {
     flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
   }
   
   /* Mobile navigation styling */
@@ -43,10 +46,11 @@ html, body, #app, #app>div {
     display: block;
   }
   
-  /* Ensure the body takes full viewport height */
-  html, body, #root, .body {
-    height: 100vh;
-    overflow: hidden;
+  /* Allow scrolling on the body but not horizontally */
+  html, body, #root {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
@@ -153,16 +157,21 @@ html, body, #app, #app>div {
   
   /* Ensure main content area has enough padding at the bottom */
   .main {
-    padding-bottom: 60px !important; /* More padding to ensure content doesn't get hidden behind nav */
-    height: calc(100vh - 60px);
-    overflow-y: auto;
-    overflow-x: hidden;
+    padding-bottom: 70px !important; /* More padding to ensure content doesn't get hidden behind nav */
+    height: auto;
+    overflow-y: visible;
   }
   
-  /* Ensure the body takes full viewport height */
-  html, body, #root, .body {
-    height: 100vh;
-    overflow: hidden;
+  /* Allow content to scroll */
+  html, body, #root {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  .body {
+    min-height: 100vh;
+    height: auto;
   }
 }
 

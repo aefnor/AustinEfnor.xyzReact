@@ -81,11 +81,16 @@ class Resume extends React.Component {
 
   render() {
     const { classes } = this.props;
-
     return (
       <div className={classes.root}>
-        <Grid container spacing={24}>
-          <Grid item xs={12} md={10} lg={8} style={{ margin: "0 auto" }}>
+        <Grid container spacing={16}>
+          <Grid
+            item
+            xs={12}
+            md={10}
+            lg={8}
+            style={{ margin: "0 auto", paddingBottom: "20px" }}
+          >
             <Paper className={classes.paper}>
               <Typography variant="h3" className={classes.header}>
                 Austin Efnor
